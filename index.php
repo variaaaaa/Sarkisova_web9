@@ -63,7 +63,7 @@
                     if ($result > $max) $max = $result;
                     if ($result < $min) $min = $result;
                     $sum += $result;
-                    $average = $sum / $encount;
+                    $average = $sum / $count;
                 }
             }
             ?>
