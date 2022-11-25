@@ -36,3 +36,7 @@ main {
     margin-left: 10px;
     margin-bottom: 60px;
 }
+
+*{
+    margin: 0;
+}

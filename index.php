@@ -20,7 +20,7 @@
         <div class= "functions">
             <?php
             $num = 0;
-            $encounting = 1000;
+            $count = 1000;
             $step = 1;
             $type = "A";
             $result;
@@ -36,18 +36,24 @@
             function f3 ($num) {
                 return 1/(($num*0.1)-2);}
 
-            for ($i = 0; $i < $encounting; $i++, $num += $step) {
-                if ($num==20){
+            for ($i = 0; $i < $count; $i++, $num += $step) {
+                if ($num == 20){
                     $result = "error";
                 }else {
-                    if ($num<=10) {$result = f1 ($num);}
-                    else if ($num > 10 && $num <= 20) {$result = f2 ($num);}
-                    else if ($num > 20) {$result = f3 ($num);}
+                    if ($num <= 10) {
+                        $result = f1 ($num);
+                    }
+                    else if ($num > 10 && $num <= 20) {
+                        $result = f2 ($num);
+                    }
+                    else if ($num > 20) {
+                        $result = f3 ($num);
+                    }
                 }
 
                 if ($type == 'A') {
                     echo 'f(' . $num . ') = ' . $result;
-                    if( $i < $encounting-1 ) echo '<br>';
+                    if( $i < $count-1 ) echo '<br>';
                 }
 
                 if ($result == "error"){
@@ -57,7 +63,7 @@
                     if ($result > $max) $max = $result;
                     if ($result < $min) $min = $result;
                     $sum += $result;
-                    $average = $sum / $encounting;
+                    $average = $sum / $encount;
                 }
             }
             ?>
